@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+* {
+  font-family: "Mulish", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.recept-item {
+  border-radius: 30px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06), 0 6px 40px 0 rgba(125, 104, 141, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06), 0 6px 40px 0 rgba(125, 104, 141, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.recept-item div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.recept-item :nth-child(1) h3 {
+  color: #7D688D;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.recept-item :nth-child(1) h5 {
+  color: #323232;
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+.recept-item :nth-child(2) {
+  margin-left: auto;
+}
+
+.recept-item :nth-child(2) img {
+  margin: 100% 0;
+}
+/*# sourceMappingURL=App.css.map */
