@@ -3,24 +3,39 @@ import Recept from "./Recept";
 
 export default function Favoriti({ recepti, definirajRecepte/*, favoriti, definirajFavorite*/ }) {
 
+    const [favoriti, definirajFavorite] = useState([]);
+    
+    
+    const osvjeziFavorite = () => {
+        let noviFavoriti = [];
+        for (let recept in recepti) {
+            if (recept.favorit === true) {
+                
+            }
+        }
+    }
+    
+    
+        
 
     return (
         <div>
             <ul className="p-0">
-                {recepti.map((recept) => {
-                    (recept.favorit ?
-                    (<Recept
+                {favoriti.map((recept, index) => (
+                    <Recept
                         naslov={recept.naslov}
                         vrijemePripreme={recept.vrijemePripreme}
                         sastojci={recept.sastojci}
                         upute={recept.upute}
                         favorit={recept.favorit}
-                        key={recept.id}
+                        id={recept.id}
+                        key={index}
                         recept={recept}
                         recepti={recepti}
                         definirajRecepte={definirajRecepte}
-
-                    />) : (<h1>Wrong</h1>))})}
+                    //favoriti={favoriti}
+                    //definirajFavorite={definirajFavorite}
+                    />))}
             </ul>
         </div>
     )
