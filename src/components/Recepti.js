@@ -1,13 +1,13 @@
 import React from "react";
 import Recept from "./Recept";
 
-const Recepti = ({ recepti, definirajRecepte/*, favoriti, definirajFavorite*/ }) => {
-
+const Recepti = ({ recepti, definirajRecepte, favoriti, definirajFavorite}) => {
 
     return (
-        
         <div>
             <ul className="p-0">
+                {/* nakon svake promijene stanja, lista se ponovno prolazi i 
+                podaci se mapiraju za svakiu Recept komponentu */}
                 {recepti.map((recept, index) => (
                     <Recept
                         naslov={recept.naslov}
@@ -16,12 +16,12 @@ const Recepti = ({ recepti, definirajRecepte/*, favoriti, definirajFavorite*/ })
                         upute={recept.upute}
                         favorit={recept.favorit}
                         id={recept.id}
-                        key={index}
                         recept={recept}
                         recepti={recepti}
                         definirajRecepte={definirajRecepte}
-                        //favoriti={favoriti}
-                        //definirajFavorite={definirajFavorite}
+                        favoriti={favoriti}
+                        definirajFavorite={definirajFavorite}
+
                     />))}
             </ul>
         </div>

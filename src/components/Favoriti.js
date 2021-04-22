@@ -1,26 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Recept from "./Recept";
 
-export default function Favoriti({ recepti, definirajRecepte/*, favoriti, definirajFavorite*/ }) {
-
-    const [favoriti, definirajFavorite] = useState([]);
-    
-    
-    const osvjeziFavorite = () => {
-        let noviFavoriti = [];
-        for (let recept in recepti) {
-            if (recept.favorit === true) {
-                
-            }
-        }
-    }
-    
-    
-        
+const Favoriti = ({ recepti, definirajRecepte, favoriti, definirajFavorite }) => {
 
     return (
         <div>
             <ul className="p-0">
+                {/* nakon svake promijene stanja, lista se ponovno prolazi i 
+                podaci se mapiraju za svaku Recept komponentu */}
                 {favoriti.map((recept, index) => (
                     <Recept
                         naslov={recept.naslov}
@@ -29,14 +16,15 @@ export default function Favoriti({ recepti, definirajRecepte/*, favoriti, defini
                         upute={recept.upute}
                         favorit={recept.favorit}
                         id={recept.id}
-                        key={index}
                         recept={recept}
                         recepti={recepti}
                         definirajRecepte={definirajRecepte}
-                    //favoriti={favoriti}
-                    //definirajFavorite={definirajFavorite}
+                        favoriti={favoriti}
+                        definirajFavorite={definirajFavorite}
                     />))}
             </ul>
         </div>
     )
 }
+
+export default Favoriti;
